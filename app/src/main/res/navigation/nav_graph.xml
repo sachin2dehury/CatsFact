@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/catsFactFragment">
+
+    <fragment
+        android:id="@+id/catsFactPaginatedFragment"
+        android:name="github.sachin2dehury.catsfact.paginated.CatsFactPaginatedFragment"
+        android:label="CatsFactPaginatedFragment"
+        tools:layout="@layout/fragment_paginated" />
+    <fragment
+        android:id="@+id/catsFactFragment"
+        android:name="github.sachin2dehury.catsfact.singlefact.CatsSingleFactFragment"
+        android:label="CatsFactFragment"
+        tools:layout="@layout/fragment_single_fact" />
+</navigation>
