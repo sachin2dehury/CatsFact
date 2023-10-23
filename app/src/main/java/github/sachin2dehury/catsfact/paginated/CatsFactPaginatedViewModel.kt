@@ -11,9 +11,9 @@ import javax.inject.Inject
 class CatsFactPaginatedViewModel @Inject constructor(private val repository: CatsFactRepository) :
     ViewModel() {
 
-    private val pagingConfig = PagingConfig(10)
+    private val pagingConfig = PagingConfig(10, 10, false, 10)
 
     fun getPager() = Pager(pagingConfig, 1) {
         CatsFactPagingSource(repository)
-    }
+    }.flow
 }
